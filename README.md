@@ -10,13 +10,33 @@ Firstly, we created an engine to generate queries from the SQLite database. From
 
 Our results:
 
-JUNE
+JUNE Temperatures
+
+![june_temps](https://github.com/bessobrien/surfs_up/blob/main/Resources/june_temps.png)
 
 and 
 
-DECEMBER
+DECEMBER Temperatures
+
+![dec_temps](https://github.com/bessobrien/surfs_up/blob/main/Resources/December_temps.png)
 
 ## Summary
 
-After looking at both June and December, we can see that 
+After looking at both June and December, we can see that the mean is within 3-4 degrees comparing June and December. The standard deviation is similiar, which means that temperatures stay fairly consistent year-round.
+
+### Other Options
+
+We could run additional queries to do a more in-depth analysis. Two additional options:
+
+1. A query to get precipitation for the months of June and December to see weather patterns:
+
+session.query(Measurement.prcp).filter(extract('month', Measurement.date)==6).all()
+session.query(Measurement.prcp).filter(extract('month', Measurement.date)==12).all()
+
+These could be turned into a list and dataframe, similiar to our attached analysis.
+
+2. A query to get temperatures and preciption into the same query:
+session.query(Measurement.prcip, Measurement.tobs).filter(extract('month', Measurement.date)==6).all()
+
+This could be turned into a list and dataframe, and use the date as the index.
 
