@@ -20,6 +20,11 @@ DECEMBER Temperatures
 
 ![dec_temps](https://github.com/bessobrien/surfs_up/blob/main/Resources/December_temps.png)
 
+Our key differences between the two:
+* Temperatures are higher in June by approximately 3-4 degrees (mean), and 2 degrees (max).
+* June also has more days counted of rain.
+* The minimum temperature in December is 8 degrees lower than in June.
+
 ## Summary
 
 After looking at both June and December, we can see that the mean is within 3-4 degrees comparing June and December. The standard deviation is similiar, which means that temperatures stay fairly consistent year-round.
